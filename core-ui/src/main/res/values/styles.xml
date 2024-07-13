@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Title1" parent="BaseTextView">
+        <item name="android:textSize">@dimen/title_1</item>
+        <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
+    </style>
+
+    <style name="Title2" parent="BaseTextView">
+        <item name="android:textSize">@dimen/title_2</item>
+        <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
+    </style>
+
+    <style name="Title3" parent="BaseTextView">
+        <item name="android:textSize">@dimen/title_3</item>
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+    </style>
+
+    <style name="Title4" parent="BaseTextView">
+        <item name="android:textSize">@dimen/title_4</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular_italic</item>
+    </style>
+
+    <style name="Text1" parent="BaseTextView">
+        <item name="android:textSize">@dimen/text_1</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    </style>
+
+    <style name="Text2" parent="BaseTextView">
+        <item name="android:textSize">@dimen/title_4</item>
+        <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
+    </style>
+
+    <style name="ButtonText1" parent="BaseTextView">
+        <item name="android:textSize">@dimen/button_text_1</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    </style>
+
+    <style name="TabText" parent="BaseTextView">
+        <item name="android:textSize">@dimen/tab_text</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    </style>
+</resources>

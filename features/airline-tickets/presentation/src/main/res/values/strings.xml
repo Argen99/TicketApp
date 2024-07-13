@@ -1,0 +1,18 @@
+<resources>
+    <string name="title_hint_button_1">Сложный маршрут</string>
+    <string name="title_hint_button_2">Куда угодно</string>
+    <string name="title_hint_button_3">Выходные</string>
+    <string name="title_hint_button_4">Горячие билеты</string>
+
+    <string name="title_rec_dest_1">Стамбул</string>
+    <string name="title_rec_dest_2">Сочи</string>
+    <string name="title_rec_dest_3">Пхукет</string>
+    <string name="rec_dest_description">Популярное направление</string>
+    <string name="title_ticket_offers">Прямые рейсы</string>
+    <string name="text_btn_all_tickets">Посмотреть все билеты</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="filter">Фильтр</string>
+    <string name="price_graph">График цен</string>
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black"
+    tools:context=".ui.fragments.empty.EmptyFragment">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:src="@drawable/ic_arrow_left"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/app_margin_horizontal"
+        android:backgroundTint="@color/grey_1"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription" />
+
+</FrameLayout>

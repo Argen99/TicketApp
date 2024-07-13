@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_airline_tickets"
+    app:startDestination="@id/airlineTicketsFragment">
+
+    <fragment
+        android:id="@+id/airlineTicketsFragment"
+        android:name="com.example.presentation.ui.fragments.airline_tickets.AirlineTicketsFragment"
+        android:label="fragment_airline_tickets"
+        tools:layout="@layout/fragment_airline_tickets" >
+        <action
+            android:id="@+id/action_airlineTicketsFragment_to_searchBottomSheet"
+            app:destination="@id/searchBottomSheet" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/searchBottomSheet"
+        android:name="com.example.presentation.ui.fragments.search.SearchBottomSheet"
+        android:label="SearchBottomSheet"
+        tools:layout="@layout/bottom_sheet_search">
+        <action
+            android:id="@+id/action_searchBottomSheet_to_emptyFragment"
+            app:destination="@id/emptyFragment" />
+        <action
+            android:id="@+id/action_searchBottomSheet_to_filledDestinationSearchFragment"
+            app:destination="@id/filledDestinationSearchFragment" />
+        <argument
+            android:name="destination"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/emptyFragment"
+        android:name="com.example.presentation.ui.fragments.empty.EmptyFragment"
+        android:label="fragment_empty"
+        tools:layout="@layout/fragment_empty" />
+    <fragment
+        android:id="@+id/filledDestinationSearchFragment"
+        android:name="com.example.presentation.ui.fragments.search.filled_destination.FilledDestinationsFragment"
+        android:label="fragment_filled_destination_search"
+        tools:layout="@layout/fragment_filled_destinations" >
+        <argument
+            android:name="departure_location"
+            app:argType="string" />
+        <argument
+            android:name="arrival_location"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_filledDestinationSearchFragment_to_allTicketsFragment"
+            app:destination="@id/allTicketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allTicketsFragment"
+        android:name="com.example.presentation.ui.fragments.all_tickets.AllTicketsFragment"
+        android:label="fragment_all_tickets"
+        tools:layout="@layout/fragment_all_tickets" >
+        <argument
+            android:name="flight_details"
+            app:argType="com.example.domain.model.FlightDetails" />
+    </fragment>
+
+</navigation>

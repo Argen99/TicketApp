@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical"
+    tools:background="@color/black">
+
+    <TextView
+        android:id="@+id/tv_badge"
+        style="@style/Title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-12dp"
+        android:background="@drawable/bg_badge"
+        android:elevation="8dp"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        tools:text="Самый удобный" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey_1"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/Title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="6 990 ₽" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/pink"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_price"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+            <TextView
+                android:id="@+id/tv_departure"
+                style="@style/Title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/tv_departure_airport_code"
+                app:layout_constraintStart_toEndOf="@+id/iv_image"
+                app:layout_constraintTop_toTopOf="@+id/iv_image"
+                tools:text="07:10" />
+
+            <ImageView
+                android:id="@+id/iv_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_minus"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_departure"
+                app:layout_constraintStart_toEndOf="@+id/tv_departure"
+                app:layout_constraintTop_toTopOf="@+id/tv_departure"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_arrival"
+                style="@style/Title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_departure"
+                app:layout_constraintStart_toEndOf="@+id/iv_minus"
+                app:layout_constraintTop_toTopOf="@+id/tv_departure"
+                tools:text="07:10" />
+
+            <TextView
+                android:id="@+id/tv_departure_airport_code"
+                style="@style/Title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_6"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_image"
+                app:layout_constraintStart_toStartOf="@+id/tv_departure"
+                app:layout_constraintTop_toBottomOf="@+id/tv_departure"
+                tools:text="VKO" />
+
+            <TextView
+                android:id="@+id/tv_arrival_airport_code"
+                style="@style/Title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_6"
+                app:layout_constraintStart_toStartOf="@+id/tv_arrival"
+                app:layout_constraintTop_toBottomOf="@+id/tv_arrival"
+                tools:text="VKO" />
+
+            <TextView
+                android:id="@+id/tv_flight_time"
+                style="@style/Text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_arrival"
+                app:layout_constraintStart_toEndOf="@id/tv_arrival"
+                app:layout_constraintTop_toTopOf="@id/tv_arrival"
+                tools:text="4ч в пути / Без пересадок" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
